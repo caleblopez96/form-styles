@@ -1,0 +1,234 @@
+/* ----------------------------------------------------- */
+/* These styles have been written for you */
+/* ----------------------------------------------------- */
+
+/* root selector for our CSS variables */
+:root {
+	--dk-teal: #196774;
+	--dk-orange: #ef6024;
+
+	--teal-rgba: rgba(25, 103, 116, 0.3);
+	--orange-rgba: rgba(240, 148, 31, 0.6);
+
+	--white: #fff;
+	--dk-gray: #363432;
+}
+
+/* Universal Selector - all page elements */
+* {
+	font-family: Arial, Verdana, sans-serif;
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+	margin: 0;
+	color: var(--dk-gray);
+}
+
+/* Header & Footer Styles */
+header,
+footer {
+	padding: 20px;
+	background-color: var(--dk-teal);
+	color: var(--white);
+	text-align: center;
+}
+
+/* Main Styles */
+main {
+	padding: 20px;
+}
+
+/* Heading Styles */
+h2,
+h3 {
+	text-align: center;
+}
+
+/* Paragraph Styles */
+p {
+	max-width: 60ch;
+	margin: 16px auto;
+}
+
+/* For the paragraph that you should note on the page */
+.notice {
+	padding: 1rem;
+	background-color: var(--teal-rgba);
+	border: 4px dashed var(--orange-rgba);
+	box-shadow: -6px 6px 10px var(--dk-gray);
+}
+
+/* These style the asterisks with a class of required that mark the required inputs */
+.required {
+	color: var(--dk-orange);
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+/* Form Styles */
+/* TO DO */
+form {
+	width: 350px;
+	margin: 1rem auto;
+	padding: 1rem;
+	background-color: var(--orange-rgba);
+	color: var(--dk-gray);
+	border-radius: 2%;
+}
+
+/* Display Styles for Form Elements */
+/* TO DO */
+input,
+label,
+select,
+textarea {
+	display: block; /* puts each input field on its own line */
+	width: 100%;
+}
+
+/* Label Styles */
+/* TO DO */
+label {
+	margin: 0 0 4px 16px;
+	font-weight: bold;
+}
+
+/* Input/Select/Textarea styles */
+/* TO DO */
+input,
+select,
+textarea {
+	padding: 0.25rem;
+	font-size: 1rem;
+	margin-bottom: 1.25rem;
+	border-radius: 2%;
+	border: 1px inset var(--dk-teal);
+}
+
+/* Select Styles (customizing this so that is displays correctly in other browsers. This code has been written for you) */
+select {
+	appearance: none;
+	height: 46px;
+	font-style: normal;
+	font-weight: normal;
+	color: var(--dk-gray);
+	background-color: var(--white);
+}
+
+/* To add an arrow to the div used for styling the select for Safari and Firefox */
+#arrow::after {
+	display: block;
+	content: "\25bc";
+	width: 4px;
+	height: 4px;
+	color: var(--dk-gray);
+	position: relative;
+	top: -3.65rem;
+	left: 18rem;
+}
+
+/* Fieldset Styles */
+/* TO DO */
+fieldset {
+	margin-bottom: 1.25rem;
+	border-radius: 2%;
+	border-color: var(--dk-gray);
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 8px;
+}
+
+/* Legend Styles */
+/* TO DO */
+legend {
+	font-weight: bold;
+}
+
+/* Submit Button Styles */
+/* TO DO */
+input[type="submit"] {
+	background-color: var(--dk-teal);
+	color: var(--white);
+	font-weight: bold;
+	border: none;
+	font-size: 1.1rem;
+	box-shadow: -6px 6px 10px var(--dk-gray);
+}
+
+/* Styles for Invalid Data in Inputs in the Form */
+/* TO DO */
+input:invalid,
+select:invalid,
+textarea:invalid {
+	box-shadow: -6px 6px 10px var(--dk-gray);
+	border: 4px solid var(--dk-orange);
+}
+
+/* Styles for Each Input as it has Focus */
+/* TO DO */
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 3px solid var(--dk-teal);
+}
+
+/* Styles for the Submit Button Focus */
+/* TO DO */
+input[type="submit"]:focus {
+	outline: 3px solid var(--dk-orange);
+}
+
+/* Styles for Submit Button Hover */
+/* TO DO */
+input[type="submit"]:hover {
+	box-shadow: -3px 3px 5px var(--dk-gray);
+}
+
+/* ----------------------------------------------------- */
+/* Optional Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
+input[type="radio"] + label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+input[type="radio"] {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 0;
+	border-radius: 0;
+}
+
+input[type="radio"] + label::before {
+	content: "\00a0"; /* Non-breaking space */
+	font-size: 2.25em;
+	line-height: 0.65;
+	border-radius: 50%;
+	display: inline-block;
+	height: 20px;
+	width: 22px;
+	text-align: center;
+	margin-right: 16px;
+	border: 2px solid var(--white); /* Push focus shadow away */
+	background-color: var(--white);
+	padding-bottom: 2px;
+}
+
+input[type="radio"]:checked + label::before {
+	content: "\2022";
+	color: var(--white);
+	background: var(--dk-teal);
+}
+
+input[type="radio"]:focus {
+	outline: none;
+}
+
+input[type="radio"]:focus + label::before {
+	box-shadow: 0 0 0 2px var(--dk-teal);
+}
