@@ -1,7 +1,3 @@
-/* ----------------------------------------------------- */
-/* These styles have been written for you */
-/* ----------------------------------------------------- */
-
 /* root selector for our CSS variables */
 :root {
 	--dk-teal: #196774;
@@ -187,8 +183,6 @@ input[type="submit"]:hover {
 	box-shadow: -3px 3px 5px var(--dk-gray);
 }
 
-/* ----------------------------------------------------- */
-/* Optional Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
 input[type="radio"] + label {
 	cursor: pointer;
 	display: flex;
